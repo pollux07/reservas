@@ -8,19 +8,24 @@ use Symfony\Component\OptionsResolver\OptionsResolverInterface;
 
 class reservacionType extends AbstractType
 {
-    /**
-     * @param FormBuilderInterface $builder
-     * @param array $options
-     */
+        
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('origen')
-            ->add('fechaReserva')
-            ->add('fechaIda')
-            ->add('noAdultos')
-            ->add('noChild')
-            ->add('precio')
+            ->add('origen', 'entity', array(
+                'class' => 'ReservasReservasBundle:pais',
+                'property' => 'pais',
+                ))
+            //->add('fechaReserva')
+            ->add('fechaIda', 'date', array(
+                    'widget' => 'single_text', 'required'=>true))
+            ->add('noAdultos', 'choice', array(
+                    'choices'  => array('1' => '1', '2' => '2','3' => '3', '4' => '4','5' => '5', '6' => '6','7' => '7', '8' => '8','9' => '9', '10' => '10')
+                ))
+            ->add('noChild', 'choice', array(
+                    'choices'  => array('1' => '1', '2' => '2','3' => '3', '4' => '4','5' => '5', '6' => '6','7' => '7', '8' => '8','9' => '9', '10' => '10')
+                ))
+            //->add('precio')
         ;
     }
     

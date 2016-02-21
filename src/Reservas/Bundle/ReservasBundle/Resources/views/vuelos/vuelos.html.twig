@@ -4,10 +4,10 @@
 	<a href="{{ path('vuelos_aca') }}">
 		<button>acapulco</button>
 	</a>
-	<a href="{{ path('vuelos_can') }}">
+	<a href="{{ path('vuelos_can', { 'id': 2 }) }}">
 		<button>cancun</button>
 	</a>
-	<a href="{{ path('vuelos_cabos') }}">
+	<a href="{{ path('vuelos_cabos', { 'id': 3 }) }}">
 		<button>los cabos</button>
 	</a>
 {% endblock %}

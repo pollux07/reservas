@@ -3,9 +3,9 @@
 namespace Reservas\Bundle\ReservasBundle\Entity;
 
 /**
- * estado
+ * pais
  */
-class estado
+class pais
 {
     /**
      * @var integer
@@ -15,7 +15,7 @@ class estado
     /**
      * @var string
      */
-    private $estado;
+    private $pais;
 
 
     /**
@@ -29,33 +29,38 @@ class estado
     }
 
     /**
-     * Set estado
+     * Set pais
      *
-     * @param string $estado
+     * @param string $pais
      *
-     * @return estado
+     * @return pais
      */
-    public function setEstado($estado)
+    public function setPais($pais)
     {
-        $this->estado = $estado;
+        $this->pais = $pais;
 
         return $this;
     }
 
     /**
-     * Get estado
+     * Get pais
      *
      * @return string
      */
-    public function getEstado()
+    public function getPais()
     {
-        return $this->estado;
+        return $this->pais;
     }
 
     public function __toString()
     {
-        return $this->estado;
+        return $this->pais;
     }
+    /**
+     * @var \Doctrine\Common\Collections\Collection
+     */
+    private $estado;
+
     /**
      * @var \Doctrine\Common\Collections\Collection
      */
@@ -67,17 +72,47 @@ class estado
     private $proveedores;
 
     /**
-     * @var \Reservas\Bundle\ReservasBundle\Entity\pais
-     */
-    private $pais;
-
-    /**
      * Constructor
      */
     public function __construct()
     {
+        $this->estado = new \Doctrine\Common\Collections\ArrayCollection();
         $this->delegacion = new \Doctrine\Common\Collections\ArrayCollection();
         $this->proveedores = new \Doctrine\Common\Collections\ArrayCollection();
+    }
+
+    /**
+     * Add estado
+     *
+     * @param \Reservas\Bundle\ReservasBundle\Entity\estado $estado
+     *
+     * @return pais
+     */
+    public function addEstado(\Reservas\Bundle\ReservasBundle\Entity\estado $estado)
+    {
+        $this->estado[] = $estado;
+
+        return $this;
+    }
+
+    /**
+     * Remove estado
+     *
+     * @param \Reservas\Bundle\ReservasBundle\Entity\estado $estado
+     */
+    public function removeEstado(\Reservas\Bundle\ReservasBundle\Entity\estado $estado)
+    {
+        $this->estado->removeElement($estado);
+    }
+
+    /**
+     * Get estado
+     *
+     * @return \Doctrine\Common\Collections\Collection
+     */
+    public function getEstado()
+    {
+        return $this->estado;
     }
 
     /**
@@ -85,7 +120,7 @@ class estado
      *
      * @param \Reservas\Bundle\ReservasBundle\Entity\delegacion $delegacion
      *
-     * @return estado
+     * @return pais
      */
     public function addDelegacion(\Reservas\Bundle\ReservasBundle\Entity\delegacion $delegacion)
     {
@@ -117,11 +152,11 @@ class estado
     /**
      * Add proveedore
      *
-     * @param \Reservas\Bundle\ReservasBundle\Entity\Proveedores $proveedore
+     * @param \Reservas\Bundle\ReservasBundle\Entity\usuario $proveedore
      *
-     * @return estado
+     * @return pais
      */
-    public function addProveedore(\Reservas\Bundle\ReservasBundle\Entity\Proveedores $proveedore)
+    public function addProveedore(\Reservas\Bundle\ReservasBundle\Entity\usuario $proveedore)
     {
         $this->proveedores[] = $proveedore;
 
@@ -131,9 +166,9 @@ class estado
     /**
      * Remove proveedore
      *
-     * @param \Reservas\Bundle\ReservasBundle\Entity\Proveedores $proveedore
+     * @param \Reservas\Bundle\ReservasBundle\Entity\usuario $proveedore
      */
-    public function removeProveedore(\Reservas\Bundle\ReservasBundle\Entity\Proveedores $proveedore)
+    public function removeProveedore(\Reservas\Bundle\ReservasBundle\Entity\usuario $proveedore)
     {
         $this->proveedores->removeElement($proveedore);
     }
@@ -146,29 +181,5 @@ class estado
     public function getProveedores()
     {
         return $this->proveedores;
-    }
-
-    /**
-     * Set pais
-     *
-     * @param \Reservas\Bundle\ReservasBundle\Entity\pais $pais
-     *
-     * @return estado
-     */
-    public function setPais(\Reservas\Bundle\ReservasBundle\Entity\pais $pais = null)
-    {
-        $this->pais = $pais;
-
-        return $this;
-    }
-
-    /**
-     * Get pais
-     *
-     * @return \Reservas\Bundle\ReservasBundle\Entity\pais
-     */
-    public function getPais()
-    {
-        return $this->pais;
     }
 }

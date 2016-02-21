@@ -16,7 +16,7 @@ Reservas\Bundle\ReservasBundle\Entity\estado:
             targetEntity: Reservas\Bundle\ReservasBundle\Entity\delegacion
             mappedBy: estado
         proveedores:
-            targetEntity: Reservas\Bundle\ReservasBundle\Entity\Proveedores
+            targetEntity: Reservas\Bundle\ReservasBundle\Entity\usuario
             mappedBy: estado
     manyToOne:
         pais:

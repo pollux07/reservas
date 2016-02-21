@@ -7,7 +7,7 @@ usuario_show:
     defaults: { _controller: "ReservasReservasBundle:usuario:show" }
 
 usuario_new:
-    path:     /new
+    path:     /{id}/new
     defaults: { _controller: "ReservasReservasBundle:usuario:new" }
 
 usuario_create:

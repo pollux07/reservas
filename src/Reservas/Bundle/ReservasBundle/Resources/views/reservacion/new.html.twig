@@ -1,15 +1,32 @@
 {% extends '::base.html.twig' %}
 
-{% block body -%}
+{% block body %}
     <h1>reservacion creation</h1>
 
-    {{ form(form) }}
+    <form action="{{ path('reservacion_create') }}" method="post" {{ form_start(form) }}>
+    	<label/>Origen
+	        {{ form_widget(form.origen, {'attr': {'class': 'form-control', 'placeholder':'Ciudad de Salida'}}) }}
+	        <span class="help-block m-b-none">{{ form_errors(form.origen) }}</span>
 
-        <ul class="record_actions">
-    <li>
-        <a href="{{ path('reservacion') }}">
-            Back to the list
-        </a>
-    </li>
-</ul>
+	    <label>Fecha de partida</label>
+	        {{ form_widget(form.fechaIda, {'attr': {'class': 'form-control'}}) }}
+	        <span class="help-block m-b-none">{{ form_errors(form.fechaIda) }}</span>
+
+	  	<label>No. Adultos</label>
+	        {{ form_widget(form.noAdultos, {'attr': {'class': 'form-control'}}) }}
+	        <span class="help-block m-b-none">{{ form_errors(form.noAdultos) }}</span>
+
+	    <label>No. Niños</label>
+	        {{ form_widget(form.noChild, {'attr': {'class': 'form-control'}}) }}
+	        <span class="help-block m-b-none">{{ form_errors(form.noChild) }}</span>
+
+	        <a href="{{ path('vuelos_show') }}">
+				<button>Regresar a los vuelos</button>
+			</a>
+
+	        {{ form_widget(form._token) }}
+            <button>Continuar</button>
+
+    </form>
+
 {% endblock %}

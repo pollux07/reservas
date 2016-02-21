@@ -36,11 +36,34 @@ class reservacionController extends Controller
     public function createAction(Request $request)
     {
         $entity = new reservacion();
+        $em = $this->getDoctrine()->getManager();
         $form = $this->createCreateForm($entity);
         $form->handleRequest($request);
 
         if ($form->isValid()) {
-            $em = $this->getDoctrine()->getManager();
+            $entity->setFechaReserva(new \DateTime("now"));
+
+            switch (variable) {
+                case 'value':
+                    # code...
+                    break;
+                
+                default:
+                    # code...
+                    break;
+            }
+
+            $data = $request->request->get('reservas_bundle_reservasbundle_reservacion');
+            $number1 = intval($data['noAdultos']);
+
+            $data2 = $request->request->get('reservas_bundle_reservasbundle_reservacion');
+            $number2 = intval($data2['noChild']);
+
+            if ($number1 > 2 && $number2 > 1) {
+                $total = $number1 + $number2;
+            }
+
+            $entity->setPrecio($total);
             $em->persist($entity);
             $em->flush();
 

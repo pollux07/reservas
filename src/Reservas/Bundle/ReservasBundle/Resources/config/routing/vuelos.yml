@@ -3,13 +3,13 @@ vuelos_show:
     defaults: { _controller: "ReservasReservasBundle:vuelos:opcs" }
 
 vuelos_aca:
-    path:     /acapulco
+    path:     /{id}/acapulco
     defaults: { _controller: "ReservasReservasBundle:vuelos:aca" }
 
 vuelos_can:
-    path:     /cancun
+    path:     /{id}/cancun
     defaults: { _controller: "ReservasReservasBundle:vuelos:can" }
 
 vuelos_cabos:
-    path:     /cabos
+    path:     /{id}/cabos
     defaults: { _controller: "ReservasReservasBundle:vuelos:cabos" }

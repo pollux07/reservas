@@ -13,7 +13,7 @@ Reservas\Bundle\ReservasBundle\Entity\delegacion:
             length: '50'
     oneToMany:
         proveedores:
-            targetEntity: Reservas\Bundle\ReservasBundle\Entity\Proveedores
+            targetEntity: Reservas\Bundle\ReservasBundle\Entity\usuario
             mappedBy: delegacion
     manyToOne:
         pais:

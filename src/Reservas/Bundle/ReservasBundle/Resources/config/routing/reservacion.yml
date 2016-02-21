@@ -7,7 +7,7 @@ reservacion_show:
     defaults: { _controller: "ReservasReservasBundle:reservacion:show" }
 
 reservacion_new:
-    path:     /new
+    path:     /{id}/new
     defaults: { _controller: "ReservasReservasBundle:reservacion:new" }
 
 reservacion_create:
