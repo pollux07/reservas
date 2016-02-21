@@ -1,0 +1,25 @@
+Reservas\Bundle\ReservasBundle\Entity\delegacion:
+    type: entity
+    table: null
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        delegacion:
+            type: string
+            length: '50'
+    oneToMany:
+        proveedores:
+            targetEntity: Reservas\Bundle\ReservasBundle\Entity\Proveedores
+            mappedBy: delegacion
+    manyToOne:
+        pais:
+            targetEntity: Reservas\Bundle\ReservasBundle\Entity\pais
+            mappedBy: delegacion
+        estado:
+            targetEntity: Reservas\Bundle\ReservasBundle\Entity\estado
+            mappedBy: delegacion
+    lifecycleCallbacks: {  }

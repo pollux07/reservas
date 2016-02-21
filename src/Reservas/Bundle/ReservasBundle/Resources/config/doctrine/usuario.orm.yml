@@ -1,0 +1,48 @@
+Reservas\Bundle\ReservasBundle\Entity\usuario:
+    type: entity
+    table: null
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        nombre:
+            type: string
+            length: '60'
+        apPat:
+            type: string
+            length: '60'
+        apMat:
+            type: string
+            length: '60'
+        correo:
+            type: string
+            length: '60'
+        telefono:
+            type: string
+            length: '15'
+        calle:
+            type: string
+            length: '60'
+        noExt:
+            type: string
+            length: '5'
+        noInt:
+            type: string
+            length: '5'
+        colonia:
+            type: string
+            length: '50'
+    manyToOne:
+        pais:
+            targetEntity: Reservas\Bundle\ReservasBundle\Entity\pais
+            mappedBy: Proveedores
+        estado:
+            targetEntity: Reservas\Bundle\ReservasBundle\Entity\estado
+            mappedBy: Proveedores
+        delegacion:
+            targetEntity: Reservas\Bundle\ReservasBundle\Entity\delegacion
+            mappedBy: Proveedores
+    lifecycleCallbacks: {  }

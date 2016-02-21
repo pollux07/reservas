@@ -1,0 +1,52 @@
+{% extends '::base.html.twig' %}
+
+{% block body -%}
+    <h1>reservacion</h1>
+
+    <table class="record_properties">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ entity.id }}</td>
+            </tr>
+            <tr>
+                <th>Origen</th>
+                <td>{{ entity.origen }}</td>
+            </tr>
+            <tr>
+                <th>Fechareserva</th>
+                <td>{{ entity.fechaReserva|date('Y-m-d H:i:s') }}</td>
+            </tr>
+            <tr>
+                <th>Fechaida</th>
+                <td>{{ entity.fechaIda|date('Y-m-d H:i:s') }}</td>
+            </tr>
+            <tr>
+                <th>Noadultos</th>
+                <td>{{ entity.noAdultos }}</td>
+            </tr>
+            <tr>
+                <th>Nochild</th>
+                <td>{{ entity.noChild }}</td>
+            </tr>
+            <tr>
+                <th>Precio</th>
+                <td>{{ entity.precio }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+        <ul class="record_actions">
+    <li>
+        <a href="{{ path('reservacion') }}">
+            Back to the list
+        </a>
+    </li>
+    <li>
+        <a href="{{ path('reservacion_edit', { 'id': entity.id }) }}">
+            Edit
+        </a>
+    </li>
+    <li>{{ form(delete_form) }}</li>
+</ul>
+{% endblock %}

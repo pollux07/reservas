@@ -1,0 +1,19 @@
+{% extends '::base.html.twig' %}
+{% block body -%}
+	<h1>Paquete Familiar Acapulco</h1>
+
+	<label>
+		4 días 3 noches<br>
+		En el cuarto día el avión sale a las 2:00 pm<br>
+		2 Adulto 1 niño<br>
+		Cargo adicional por persona $2500<br>
+		Hotel incluido<br>
+		Avión ida y vuelta $9,000<br>
+	</label>
+	<a href="{{ path('vuelos_show') }}">
+		<button>Regresar</button>
+	</a>
+	<a href="{{ path('usuario_new') }}">
+		<button>Continuar</button>
+	</a>
+{% endblock %}

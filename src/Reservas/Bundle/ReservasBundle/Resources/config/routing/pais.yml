@@ -1,0 +1,30 @@
+pais:
+    path:     /
+    defaults: { _controller: "ReservasReservasBundle:pais:index" }
+
+pais_show:
+    path:     /{id}/show
+    defaults: { _controller: "ReservasReservasBundle:pais:show" }
+
+pais_new:
+    path:     /new
+    defaults: { _controller: "ReservasReservasBundle:pais:new" }
+
+pais_create:
+    path:     /create
+    defaults: { _controller: "ReservasReservasBundle:pais:create" }
+    methods:  POST
+
+pais_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "ReservasReservasBundle:pais:edit" }
+
+pais_update:
+    path:     /{id}/update
+    defaults: { _controller: "ReservasReservasBundle:pais:update" }
+    methods:  [POST, PUT]
+
+pais_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "ReservasReservasBundle:pais:delete" }
+    methods:  [POST, DELETE]

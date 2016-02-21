@@ -1,0 +1,4 @@
+services:
+#    reservas_reservas.example:
+#        class: Reservas\Bundle\ReservasBundle\Example
+#        arguments: [@service_id, "plain_value", %parameter%]

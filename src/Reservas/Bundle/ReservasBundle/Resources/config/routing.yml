@@ -1,0 +1,31 @@
+reservas_reservas_delegacion:
+    resource: "@ReservasReservasBundle/Resources/config/routing/delegacion.yml"
+    prefix:   /delegacion
+
+reservas_reservas_estado:
+    resource: "@ReservasReservasBundle/Resources/config/routing/estado.yml"
+    prefix:   /estado
+
+reservas_reservas_pais:
+    resource: "@ReservasReservasBundle/Resources/config/routing/pais.yml"
+    prefix:   /pais
+
+reservas_reservas_reservacion:
+    resource: "@ReservasReservasBundle/Resources/config/routing/reservacion.yml"
+    prefix:   /reservacion
+
+reservas_reservas_usuario:
+    resource: "@ReservasReservasBundle/Resources/config/routing/usuario.yml"
+    prefix:   /usuario
+
+reservas_reservas_vuelos:
+    resource: "@ReservasReservasBundle/Resources/config/routing/vuelos.yml"
+    prefix:   /vuelos
+
+reservas_reservas_inicio:
+    path:     /inicio
+    defaults: { _controller: "ReservasReservasBundle:inicio:inicio" }
+
+reservas_reservas_homepage:
+    path:     /hello/{name}
+    defaults: { _controller: ReservasReservasBundle:Default:index }

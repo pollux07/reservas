@@ -1,0 +1,30 @@
+estado:
+    path:     /
+    defaults: { _controller: "ReservasReservasBundle:estado:index" }
+
+estado_show:
+    path:     /{id}/show
+    defaults: { _controller: "ReservasReservasBundle:estado:show" }
+
+estado_new:
+    path:     /new
+    defaults: { _controller: "ReservasReservasBundle:estado:new" }
+
+estado_create:
+    path:     /create
+    defaults: { _controller: "ReservasReservasBundle:estado:create" }
+    methods:  POST
+
+estado_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "ReservasReservasBundle:estado:edit" }
+
+estado_update:
+    path:     /{id}/update
+    defaults: { _controller: "ReservasReservasBundle:estado:update" }
+    methods:  [POST, PUT]
+
+estado_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "ReservasReservasBundle:estado:delete" }
+    methods:  [POST, DELETE]

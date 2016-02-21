@@ -1,0 +1,15 @@
+vuelos_show:
+    path:     /
+    defaults: { _controller: "ReservasReservasBundle:vuelos:opcs" }
+
+vuelos_aca:
+    path:     /acapulco
+    defaults: { _controller: "ReservasReservasBundle:vuelos:aca" }
+
+vuelos_can:
+    path:     /cancun
+    defaults: { _controller: "ReservasReservasBundle:vuelos:can" }
+
+vuelos_cabos:
+    path:     /cabos
+    defaults: { _controller: "ReservasReservasBundle:vuelos:cabos" }

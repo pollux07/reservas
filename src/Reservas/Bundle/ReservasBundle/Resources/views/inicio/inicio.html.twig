@@ -1,0 +1,7 @@
+{% extends '::base.html.twig' %}
+{% block body -%}
+	<label>Reserva tu vuelo seleccionando la imagen</label>
+	<a href="{{ path('vuelos_show') }}">
+		<img src="{{asset('../bundle/public/images/vuelos-1.jpg')}}">
+	</a>
+{% endblock %}

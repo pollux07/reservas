@@ -1,0 +1,24 @@
+Reservas\Bundle\ReservasBundle\Entity\reservacion:
+    type: entity
+    table: null
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        origen:
+            type: string
+            length: '50'
+        fechaReserva:
+            type: datetime
+        fechaIda:
+            type: datetime
+        noAdultos:
+            type: integer
+        noChild:
+            type: integer
+        precio:
+            type: integer
+    lifecycleCallbacks: {  }

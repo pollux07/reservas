@@ -1,0 +1,30 @@
+reservacion:
+    path:     /
+    defaults: { _controller: "ReservasReservasBundle:reservacion:index" }
+
+reservacion_show:
+    path:     /{id}/show
+    defaults: { _controller: "ReservasReservasBundle:reservacion:show" }
+
+reservacion_new:
+    path:     /new
+    defaults: { _controller: "ReservasReservasBundle:reservacion:new" }
+
+reservacion_create:
+    path:     /create
+    defaults: { _controller: "ReservasReservasBundle:reservacion:create" }
+    methods:  POST
+
+reservacion_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "ReservasReservasBundle:reservacion:edit" }
+
+reservacion_update:
+    path:     /{id}/update
+    defaults: { _controller: "ReservasReservasBundle:reservacion:update" }
+    methods:  [POST, PUT]
+
+reservacion_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "ReservasReservasBundle:reservacion:delete" }
+    methods:  [POST, DELETE]

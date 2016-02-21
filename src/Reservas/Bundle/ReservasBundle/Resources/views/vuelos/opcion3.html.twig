@@ -1,0 +1,19 @@
+{% extends '::base.html.twig' %}
+{% block body -%}
+	<h1>Paquete Familiar Los Cabos</h1>
+
+	<label>
+		10 días 9 noches<br>
+		En el cuarto día el avión sale a las 12:00 pm<br>
+		6 Adulto 4 niño<br>
+		Cargo adicional por persona $3500<br>
+		Hotel incluido<br>
+		Avión ida y vuelta $20,000<br>
+	</label>
+	<a href="{{ path('vuelos_show') }}">
+		<button>Regresar</button>
+	</a>
+	<a href="{{ path('usuario_new') }}">
+		<button>Continuar</button>
+	</a>
+{% endblock %}
