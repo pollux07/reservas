@@ -7,7 +7,7 @@
 
     <form action="{{ path('usuario_create') }}" method="post" {{ form_start(form) }}>
 
-    	{{form_widget(op.op, {'attr': {'hidden': 'true'}}) }}
+    	
     	<label/>Nombre(s)
 	        {{ form_widget(form.nombre, {'attr': {'class': 'form-control'}}) }}
 	        <span class="help-block m-b-none">{{ form_errors(form.nombre) }}</span>
