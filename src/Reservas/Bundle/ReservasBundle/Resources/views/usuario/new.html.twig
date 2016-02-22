@@ -6,6 +6,8 @@
     <h2>Datos de quien reserva</h2>
 
     <form action="{{ path('usuario_create') }}" method="post" {{ form_start(form) }}>
+
+    	{{form_widget(op.op, {'attr': {'hidden': 'true'}}) }}
     	<label/>Nombre(s)
 	        {{ form_widget(form.nombre, {'attr': {'class': 'form-control'}}) }}
 	        <span class="help-block m-b-none">{{ form_errors(form.nombre) }}</span>
@@ -55,10 +57,6 @@
 	    <label>Colonia</label>
 	        {{ form_widget(form.colonia, {'attr': {'class': 'form-control'}}) }}
 	        <span class="help-block m-b-none">{{ form_errors(form.colonia) }}</span>
-
-	        <a href="{{ path('vuelos_show') }}">
-				<button>Regresar a los vuelos</button>
-			</a>
 
 	        {{ form_widget(form._token) }}
             <button>Continuar</button>

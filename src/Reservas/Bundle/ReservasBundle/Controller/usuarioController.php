@@ -44,7 +44,7 @@ class usuarioController extends Controller
             $em->persist($entity);
             $em->flush();
 
-            return $this->redirect($this->generateUrl('reservacion_new'));
+            return $this->redirect($this->generateUrl('reservacion_new', array('op' => $op, 'id' => $entity->getId())));
         }
 
         return $this->render('ReservasReservasBundle:usuario:new.html.twig', array(
@@ -76,13 +76,14 @@ class usuarioController extends Controller
      * Displays a form to create a new usuario entity.
      *
      */
-    public function newAction()
+    public function newAction($op)
     {
         $entity = new usuario();
         $form   = $this->createCreateForm($entity);
 
         return $this->render('ReservasReservasBundle:usuario:new.html.twig', array(
             'entity' => $entity,
+            'op' => str_split($op,2),
             'form'   => $form->createView(),
         ));
     }
